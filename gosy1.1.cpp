@@ -2,7 +2,6 @@
 #include "pch.h"
 #include <stdio.h>
 #include <malloc.h>
-#include <string.h>
 
 struct Element {
 	int id;
@@ -73,6 +72,7 @@ void addElement(Element** head)
 	}
 	if (current->next != NULL) {
 		element->next = current->next;
+		current->next->prev = element
 	}
 	element->prev = current;
 	current->next = element;
